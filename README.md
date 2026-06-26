@@ -1,5 +1,8 @@
 # Behavioral Featurization
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20931277.svg)](https://doi.org/10.5281/zenodo.20931277)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 Companion code for the paper *Behavioral Featurization: Operationalizing Data of
 Unknown or Volatile Dimensionality for Machine Learning* (IEEE Access).
 
@@ -63,6 +66,17 @@ behind the reported tables.
 All learned baselines share one fair protocol (minibatch Adam, gradient clipping,
 single-threaded timing) and the same leakage-controlled cross-validation
 (non-overlapping windows, stratified group k-fold over contiguous time blocks).
+
+## Citation
+
+If you use this code, please cite the archived release:
+
+> F. A. L. Lemos, D. do Amaral, F. M. Priotto, and A. E. Lazzaretti,
+> *Behavioral Featurization* (v1.0.0). Zenodo, 2026. doi:10.5281/zenodo.20931277.
+
+The accompanying paper, *Behavioral Featurization: Operationalizing Data of
+Unknown or Volatile Dimensionality for Machine Learning*, is to appear in IEEE
+Access; its reference will be added here on publication.
 
 ## License
 

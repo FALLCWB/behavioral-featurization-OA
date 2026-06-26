@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using these metadata."
+title: "Behavioral Featurization"
+abstract: "Companion code for the paper Behavioral Featurization: Operationalizing Data of Unknown or Volatile Dimensionality for Machine Learning."
+type: software
+authors:
+  - family-names: "Lemos"
+    given-names: "Filipe Augusto da Luz"
+  - family-names: "do Amaral"
+    given-names: "Douglas"
+  - family-names: "Priotto"
+    given-names: "Felipe Messias"
+  - family-names: "Lazzaretti"
+    given-names: "André Eugênio"
+repository-code: "https://github.com/FALLCWB/behavioral-featurization-OA"
+license: MIT
+version: "v1.0.0"
+date-released: "2026-06-26"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.20931277"
+    description: "Archived release v1.0.0 on Zenodo"
