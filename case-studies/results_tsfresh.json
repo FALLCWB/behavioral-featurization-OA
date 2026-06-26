@@ -1,0 +1,23 @@
+[
+  {
+    "domain": "Memory (real)",
+    "tsfresh_acc": 0.8889,
+    "tsfresh_sd": 0.0232,
+    "kept": 641,
+    "total": 4662
+  },
+  {
+    "domain": "Dynamic graphs",
+    "tsfresh_acc": 0.9481,
+    "tsfresh_sd": 0.0646,
+    "kept": 1235,
+    "total": 4662
+  },
+  {
+    "domain": "Ecology (EcoMon)",
+    "tsfresh_acc": 0.619,
+    "tsfresh_sd": 0.0157,
+    "kept": 621,
+    "total": 3885
+  }
+]

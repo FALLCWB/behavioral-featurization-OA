@@ -1,0 +1,51 @@
+{
+  "symbol": "BTCUSDT",
+  "n_snapshots": 4000,
+  "span_min": 23.9,
+  "n_windows": 93,
+  "order_detection": {
+    "shuffle": {
+      "behavioral": [
+        1.0,
+        0.0
+      ],
+      "signature_order_aware": [
+        0.9833333333333334,
+        0.03333333333333335
+      ],
+      "set_pool": [
+        0.5,
+        0.0
+      ],
+      "sketch": [
+        0.5,
+        0.0
+      ]
+    },
+    "reverse": {
+      "behavioral": [
+        0.4798245614035087,
+        0.08678055195451836
+      ],
+      "signature_order_aware": [
+        0.7830409356725146,
+        0.11738810197551673
+      ],
+      "set_pool": [
+        0.5,
+        0.0
+      ],
+      "sketch": [
+        0.5,
+        0.0
+      ]
+    }
+  },
+  "levels_in_2bps_band": {
+    "min": 136,
+    "median": 188,
+    "max": 200,
+    "cv": 0.057
+  },
+  "note": "REST limit=100 book is dense near mid (~fixed dim); future-price label is near-efficient (not learnable under blocked CV). Order structure IS real and marginal-invisible: see order_detection (behavioral~1.0 shuffle vs pool/sketch 0.500)."
+}

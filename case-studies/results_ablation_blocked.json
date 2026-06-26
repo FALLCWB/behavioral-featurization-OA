@@ -1,0 +1,44 @@
+[
+  {
+    "domain": "Memory (real)",
+    "dispersion_family": [
+      "centroid",
+      "spatial_entropy"
+    ],
+    "full": 0.85,
+    "minus_dispersion": 0.8472,
+    "dispersion_gain": 0.0028,
+    "dispersion_only": 0.4,
+    "fdr_kept": 48,
+    "fdr_total": 96,
+    "fdr_acc": 0.8639
+  },
+  {
+    "domain": "Dynamic graphs",
+    "dispersion_family": [
+      "density",
+      "new_node_rate"
+    ],
+    "full": 0.963,
+    "minus_dispersion": 0.963,
+    "dispersion_gain": 0.0,
+    "dispersion_only": 0.837,
+    "fdr_kept": 86,
+    "fdr_total": 96,
+    "fdr_acc": 0.963
+  },
+  {
+    "domain": "Ecology (EcoMon)",
+    "dispersion_family": [
+      "new_taxa_rate",
+      "turnover"
+    ],
+    "full": 0.6344,
+    "minus_dispersion": 0.6351,
+    "dispersion_gain": -0.0007,
+    "dispersion_only": 0.5749,
+    "fdr_kept": 49,
+    "fdr_total": 80,
+    "fdr_acc": 0.6304
+  }
+]

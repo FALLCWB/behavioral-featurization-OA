@@ -1,0 +1,146 @@
+[
+  {
+    "dataset": "ECG200",
+    "n_train": 100,
+    "n_test": 100,
+    "series_len": 96,
+    "majority": 0.64,
+    "acc": {
+      "behavioral": 0.85,
+      "signature_order": 0.73,
+      "set_pool": 0.75,
+      "sketch": 0.78,
+      "behavioral_shuffled": 0.78
+    },
+    "acc_ci": {
+      "behavioral": [
+        0.78,
+        0.92
+      ],
+      "signature_order": [
+        0.64,
+        0.82
+      ],
+      "set_pool": [
+        0.67,
+        0.83
+      ],
+      "sketch": [
+        0.7,
+        0.86
+      ],
+      "behavioral_shuffled": [
+        0.7,
+        0.86
+      ]
+    },
+    "order_gap": 0.07,
+    "order_gap_ci": [
+      0.01,
+      0.13
+    ],
+    "order_gap_sig": true,
+    "order_aware_minus_marginal": 0.07,
+    "order_aware_minus_marginal_ci": [
+      0.01,
+      0.13
+    ],
+    "order_aware_minus_marginal_sig": true
+  },
+  {
+    "dataset": "GunPoint",
+    "n_train": 50,
+    "n_test": 150,
+    "series_len": 150,
+    "majority": 0.5067,
+    "acc": {
+      "behavioral": 0.8933,
+      "signature_order": 0.7933,
+      "set_pool": 0.6467,
+      "sketch": 0.8867,
+      "behavioral_shuffled": 0.8067
+    },
+    "acc_ci": {
+      "behavioral": [
+        0.8467,
+        0.94
+      ],
+      "signature_order": [
+        0.7267,
+        0.86
+      ],
+      "set_pool": [
+        0.5733,
+        0.7267
+      ],
+      "sketch": [
+        0.8333,
+        0.9333
+      ],
+      "behavioral_shuffled": [
+        0.7467,
+        0.8667
+      ]
+    },
+    "order_gap": 0.0866,
+    "order_gap_ci": [
+      0.0267,
+      0.1467
+    ],
+    "order_gap_sig": true,
+    "order_aware_minus_marginal": 0.0066,
+    "order_aware_minus_marginal_ci": [
+      -0.04,
+      0.06
+    ],
+    "order_aware_minus_marginal_sig": false
+  },
+  {
+    "dataset": "ItalyPowerDemand",
+    "n_train": 67,
+    "n_test": 1029,
+    "series_len": 24,
+    "majority": 0.5015,
+    "acc": {
+      "behavioral": 0.8659,
+      "signature_order": 0.7551,
+      "set_pool": 0.6152,
+      "sketch": 0.7881,
+      "behavioral_shuffled": 0.7677
+    },
+    "acc_ci": {
+      "behavioral": [
+        0.8445,
+        0.8844
+      ],
+      "signature_order": [
+        0.7279,
+        0.7813
+      ],
+      "set_pool": [
+        0.585,
+        0.6453
+      ],
+      "sketch": [
+        0.7619,
+        0.8124
+      ],
+      "behavioral_shuffled": [
+        0.7425,
+        0.794
+      ]
+    },
+    "order_gap": 0.0982,
+    "order_gap_ci": [
+      0.0709,
+      0.1244
+    ],
+    "order_gap_sig": true,
+    "order_aware_minus_marginal": 0.0778,
+    "order_aware_minus_marginal_ci": [
+      0.0515,
+      0.104
+    ],
+    "order_aware_minus_marginal_sig": true
+  }
+]

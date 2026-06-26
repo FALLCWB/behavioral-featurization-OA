@@ -1,0 +1,55 @@
+{
+  "n_windows": 1496,
+  "n_blocks": 5,
+  "generic_dim": 80,
+  "domain_dim": 144,
+  "acc": {
+    "generic": [
+      0.6344,
+      [
+        0.6096,
+        0.6584
+      ]
+    ],
+    "domain": [
+      0.6384,
+      [
+        0.6136,
+        0.6618
+      ]
+    ],
+    "deepsets": [
+      0.6056,
+      [
+        0.5809,
+        0.631
+      ]
+    ]
+  },
+  "paired_gaps": {
+    "domain_minus_generic": {
+      "delta": 0.004,
+      "ci95": [
+        -0.014,
+        0.0221
+      ],
+      "sig": false
+    },
+    "deepsets_minus_generic": {
+      "delta": -0.0287,
+      "ci95": [
+        -0.0548,
+        -0.0027
+      ],
+      "sig": true
+    },
+    "domain_minus_deepsets": {
+      "delta": 0.0328,
+      "ci95": [
+        0.0047,
+        0.0602
+      ],
+      "sig": true
+    }
+  }
+}

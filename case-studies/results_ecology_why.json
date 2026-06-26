@@ -1,0 +1,32 @@
+{
+  "region_generic": 0.5756,
+  "region_domain": 0.6189,
+  "season_domain": 0.49,
+  "labels": [
+    "mid",
+    "north",
+    "south"
+  ],
+  "confusion": [
+    [
+      142,
+      74,
+      84
+    ],
+    [
+      61,
+      216,
+      23
+    ],
+    [
+      63,
+      38,
+      199
+    ]
+  ],
+  "balanced_n": {
+    "mid": 300,
+    "north": 300,
+    "south": 300
+  }
+}

@@ -1,0 +1,131 @@
+[
+  {
+    "domain": "Memory (real)",
+    "n_windows": 360,
+    "chance": 0.5,
+    "modes": {
+      "shuffle": {
+        "behavioral": [
+          1.0,
+          0.0
+        ],
+        "signature_order_aware": [
+          0.9972222222222221,
+          0.0034020690871988464
+        ],
+        "set_pool": [
+          0.5,
+          0.0
+        ],
+        "sketch": [
+          0.5,
+          0.0
+        ]
+      },
+      "reverse": {
+        "behavioral": [
+          1.0,
+          0.0
+        ],
+        "signature_order_aware": [
+          1.0,
+          0.0
+        ],
+        "set_pool": [
+          0.5,
+          0.0
+        ],
+        "sketch": [
+          0.5,
+          0.0
+        ]
+      }
+    }
+  },
+  {
+    "domain": "Dynamic graphs",
+    "n_windows": 135,
+    "chance": 0.5,
+    "modes": {
+      "shuffle": {
+        "behavioral": [
+          1.0,
+          0.0
+        ],
+        "signature_order_aware": [
+          1.0,
+          0.0
+        ],
+        "set_pool": [
+          0.5,
+          0.0
+        ],
+        "sketch": [
+          0.5,
+          0.0
+        ]
+      },
+      "reverse": {
+        "behavioral": [
+          1.0,
+          0.0
+        ],
+        "signature_order_aware": [
+          1.0,
+          0.0
+        ],
+        "set_pool": [
+          0.5,
+          0.0
+        ],
+        "sketch": [
+          0.5,
+          0.0
+        ]
+      }
+    }
+  },
+  {
+    "domain": "Ecology (EcoMon)",
+    "n_windows": 1496,
+    "chance": 0.5,
+    "modes": {
+      "shuffle": {
+        "behavioral": [
+          0.9883076923076922,
+          0.005266962858500297
+        ],
+        "signature_order_aware": [
+          0.9792809364548495,
+          0.008292088923580665
+        ],
+        "set_pool": [
+          0.5,
+          0.0
+        ],
+        "sketch": [
+          0.5,
+          0.0
+        ]
+      },
+      "reverse": {
+        "behavioral": [
+          1.0,
+          0.0
+        ],
+        "signature_order_aware": [
+          1.0,
+          0.0
+        ],
+        "set_pool": [
+          0.5,
+          0.0
+        ],
+        "sketch": [
+          0.5,
+          0.0
+        ]
+      }
+    }
+  }
+]

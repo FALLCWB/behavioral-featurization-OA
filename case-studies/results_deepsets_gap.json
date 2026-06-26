@@ -1,0 +1,55 @@
+{
+  "domain": "memory (real)",
+  "n": 360,
+  "ours_dim": 96,
+  "rich_dim": 4662,
+  "acc": {
+    "ours": [
+      0.85,
+      [
+        0.8111,
+        0.8861
+      ]
+    ],
+    "ours_rich_tsfresh": [
+      0.8417,
+      [
+        0.8028,
+        0.8778
+      ]
+    ],
+    "deepsets": [
+      0.9333,
+      [
+        0.9056,
+        0.9556
+      ]
+    ]
+  },
+  "paired_gaps": {
+    "deepsets_minus_ours": {
+      "delta": 0.0833,
+      "ci95": [
+        0.0444,
+        0.1222
+      ],
+      "sig": true
+    },
+    "deepsets_minus_rich": {
+      "delta": 0.0917,
+      "ci95": [
+        0.0528,
+        0.1306
+      ],
+      "sig": true
+    },
+    "rich_minus_ours": {
+      "delta": -0.0083,
+      "ci95": [
+        -0.0333,
+        0.0167
+      ],
+      "sig": false
+    }
+  }
+}

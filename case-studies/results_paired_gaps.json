@@ -1,0 +1,281 @@
+[
+  {
+    "domain": "memory",
+    "n": 360,
+    "ours_acc": [
+      0.85,
+      [
+        0.8111,
+        0.8861
+      ]
+    ],
+    "gaps": {
+      "deepsets": {
+        "baseline_acc": [
+          0.9333,
+          [
+            0.9056,
+            0.9556
+          ]
+        ],
+        "delta_baseline_minus_ours": 0.0833,
+        "ci95": [
+          0.0444,
+          0.1222
+        ],
+        "sig": true
+      },
+      "lstm": {
+        "baseline_acc": [
+          0.55,
+          [
+            0.5,
+            0.6056
+          ]
+        ],
+        "delta_baseline_minus_ours": -0.3,
+        "ci95": [
+          -0.3583,
+          -0.2417
+        ],
+        "sig": true
+      },
+      "mil": {
+        "baseline_acc": [
+          0.9472,
+          [
+            0.9222,
+            0.9667
+          ]
+        ],
+        "delta_baseline_minus_ours": 0.0972,
+        "ci95": [
+          0.0611,
+          0.1334
+        ],
+        "sig": true
+      },
+      "settransformer": {
+        "baseline_acc": [
+          0.9528,
+          [
+            0.9306,
+            0.975
+          ]
+        ],
+        "delta_baseline_minus_ours": 0.1028,
+        "ci95": [
+          0.0667,
+          0.1417
+        ],
+        "sig": true
+      },
+      "tcn": {
+        "baseline_acc": [
+          0.3444,
+          [
+            0.2972,
+            0.3944
+          ]
+        ],
+        "delta_baseline_minus_ours": -0.5056,
+        "ci95": [
+          -0.5667,
+          -0.4444
+        ],
+        "sig": true
+      }
+    }
+  },
+  {
+    "domain": "graphs",
+    "n": 135,
+    "ours_acc": [
+      0.963,
+      [
+        0.9259,
+        0.9926
+      ]
+    ],
+    "gaps": {
+      "deepsets": {
+        "baseline_acc": [
+          0.9704,
+          [
+            0.9407,
+            0.9926
+          ]
+        ],
+        "delta_baseline_minus_ours": 0.0074,
+        "ci95": [
+          0.0,
+          0.0222
+        ],
+        "sig": false
+      },
+      "lstm": {
+        "baseline_acc": [
+          0.9407,
+          [
+            0.8963,
+            0.9778
+          ]
+        ],
+        "delta_baseline_minus_ours": -0.0222,
+        "ci95": [
+          -0.0593,
+          0.0074
+        ],
+        "sig": false
+      },
+      "mil": {
+        "baseline_acc": [
+          0.9778,
+          [
+            0.9556,
+            1.0
+          ]
+        ],
+        "delta_baseline_minus_ours": 0.0148,
+        "ci95": [
+          0.0,
+          0.037
+        ],
+        "sig": false
+      },
+      "settransformer": {
+        "baseline_acc": [
+          0.9704,
+          [
+            0.9407,
+            0.9926
+          ]
+        ],
+        "delta_baseline_minus_ours": 0.0074,
+        "ci95": [
+          0.0,
+          0.0222
+        ],
+        "sig": false
+      },
+      "tcn": {
+        "baseline_acc": [
+          0.9704,
+          [
+            0.9407,
+            0.9926
+          ]
+        ],
+        "delta_baseline_minus_ours": 0.0074,
+        "ci95": [
+          0.0,
+          0.0222
+        ],
+        "sig": false
+      },
+      "dyngraph": {
+        "baseline_acc": [
+          0.7926,
+          [
+            0.7259,
+            0.8593
+          ]
+        ],
+        "delta_baseline_minus_ours": -0.1704,
+        "ci95": [
+          -0.237,
+          -0.1037
+        ],
+        "sig": true
+      }
+    }
+  },
+  {
+    "domain": "ecology",
+    "n": 1496,
+    "ours_acc": [
+      0.6344,
+      [
+        0.609,
+        0.6591
+      ]
+    ],
+    "gaps": {
+      "deepsets": {
+        "baseline_acc": [
+          0.6056,
+          [
+            0.5816,
+            0.629
+          ]
+        ],
+        "delta_baseline_minus_ours": -0.0287,
+        "ci95": [
+          -0.0555,
+          -0.002
+        ],
+        "sig": true
+      },
+      "lstm": {
+        "baseline_acc": [
+          0.5702,
+          [
+            0.5448,
+            0.5963
+          ]
+        ],
+        "delta_baseline_minus_ours": -0.0642,
+        "ci95": [
+          -0.0916,
+          -0.0374
+        ],
+        "sig": true
+      },
+      "mil": {
+        "baseline_acc": [
+          0.6016,
+          [
+            0.5762,
+            0.6257
+          ]
+        ],
+        "delta_baseline_minus_ours": -0.0328,
+        "ci95": [
+          -0.0602,
+          -0.006
+        ],
+        "sig": true
+      },
+      "settransformer": {
+        "baseline_acc": [
+          0.5548,
+          [
+            0.5287,
+            0.5796
+          ]
+        ],
+        "delta_baseline_minus_ours": -0.0795,
+        "ci95": [
+          -0.1076,
+          -0.0515
+        ],
+        "sig": true
+      },
+      "tcn": {
+        "baseline_acc": [
+          0.5742,
+          [
+            0.5495,
+            0.5983
+          ]
+        ],
+        "delta_baseline_minus_ours": -0.0602,
+        "ci95": [
+          -0.0889,
+          -0.0334
+        ],
+        "sig": true
+      }
+    }
+  }
+]

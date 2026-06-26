@@ -1,0 +1,125 @@
+[
+  {
+    "domain": "Memory (real)",
+    "n": 360,
+    "classes": [
+      "ALLOC",
+      "FREE",
+      "SCAN"
+    ],
+    "chance": 0.3333333333333333,
+    "cv": "StratifiedKFold",
+    "rep_acc": {
+      "behavioral": [
+        0.85,
+        0.032155102507750624
+      ],
+      "set_pool": [
+        0.8472222222222221,
+        0.030429030972509243
+      ],
+      "sketch": [
+        0.825,
+        0.04082482904638632
+      ],
+      "naive_snapshot": [
+        0.4138888888888889,
+        0.029658550700086973
+      ],
+      "signature_order_aware": [
+        0.6611111111111111,
+        0.053142017971413845
+      ],
+      "behavioral_shuffled": [
+        0.8694444444444445,
+        0.02721655269759084
+      ]
+    },
+    "order_gap": -0.0194,
+    "best_single_feature_acc": 0.5778,
+    "perm_p": 0.000999000999000999,
+    "perm_null_max": 0.42777777777777776
+  },
+  {
+    "domain": "Dynamic graphs",
+    "n": 135,
+    "classes": [
+      "college",
+      "email",
+      "mathoverflow"
+    ],
+    "chance": 0.3333333333333333,
+    "cv": "StratifiedGroupKFold(time-blocks)",
+    "rep_acc": {
+      "behavioral": [
+        0.962962962962963,
+        0.05737753105492469
+      ],
+      "set_pool": [
+        0.9555555555555555,
+        0.054433105395181765
+      ],
+      "sketch": [
+        0.9555555555555555,
+        0.059259259259259255
+      ],
+      "naive_snapshot": [
+        0.9259259259259259,
+        0.06197481678030188
+      ],
+      "signature_order_aware": [
+        0.8074074074074076,
+        0.059259259259259255
+      ],
+      "behavioral_shuffled": [
+        0.962962962962963,
+        0.05737753105492469
+      ]
+    },
+    "order_gap": 0.0,
+    "best_single_feature_acc": 0.763,
+    "perm_p": 0.000999000999000999,
+    "perm_null_max": 0.45925925925925926
+  },
+  {
+    "domain": "Ecology (EcoMon)",
+    "n": 1496,
+    "classes": [
+      "mid",
+      "north",
+      "south"
+    ],
+    "chance": 0.3333333333333333,
+    "cv": "StratifiedGroupKFold(time-blocks)",
+    "rep_acc": {
+      "behavioral": [
+        0.6343997665596731,
+        0.02377273854474553
+      ],
+      "set_pool": [
+        0.6236862472222845,
+        0.013795666244759239
+      ],
+      "sketch": [
+        0.6451045019565592,
+        0.021403798372925692
+      ],
+      "naive_snapshot": [
+        0.5408075239613027,
+        0.025589004954241372
+      ],
+      "signature_order_aware": [
+        0.556138492963121,
+        0.011054827758614492
+      ],
+      "behavioral_shuffled": [
+        0.6324310715060641,
+        0.03772803094276647
+      ]
+    },
+    "order_gap": 0.002,
+    "best_single_feature_acc": 0.5656,
+    "perm_p": 0.000999000999000999,
+    "perm_null_max": 0.5735054656461135
+  }
+]

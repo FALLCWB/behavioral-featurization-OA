@@ -1,0 +1,70 @@
+[
+  {
+    "domain": "Dynamic graphs",
+    "signal": "nodes",
+    "n": 132,
+    "majority_baseline": 0.5758,
+    "acc": {
+      "behavioral": [
+        0.5796,
+        0.1007
+      ],
+      "signature_order": [
+        0.5593,
+        0.0624
+      ],
+      "set_pool": [
+        0.712,
+        0.0361
+      ],
+      "sketch": [
+        0.6759,
+        0.0614
+      ],
+      "naive_snapshot": [
+        0.5037,
+        0.0895
+      ],
+      "behavioral_shuffled": [
+        0.6269,
+        0.0734
+      ]
+    },
+    "order_gap": -0.0473,
+    "behavioral_minus_pool": -0.1324
+  },
+  {
+    "domain": "Ecology (EcoMon)",
+    "signal": "richness",
+    "n": 1493,
+    "majority_baseline": 0.5117,
+    "acc": {
+      "behavioral": [
+        0.6276,
+        0.0254
+      ],
+      "signature_order": [
+        0.629,
+        0.0283
+      ],
+      "set_pool": [
+        0.6195,
+        0.0299
+      ],
+      "sketch": [
+        0.6183,
+        0.0183
+      ],
+      "naive_snapshot": [
+        0.5144,
+        0.0215
+      ],
+      "behavioral_shuffled": [
+        0.6075,
+        0.0238
+      ]
+    },
+    "order_gap": 0.0201,
+    "behavioral_minus_pool": 0.0081
+  }
+]

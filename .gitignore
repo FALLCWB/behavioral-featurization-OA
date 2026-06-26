@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+
+# Third-party datasets are fetched locally, not redistributed (see DATA.md).
+case-studies/*/data/
+case-studies/data/
+
+# Generated figures and scratch outputs.
+figures/
+*.pdf

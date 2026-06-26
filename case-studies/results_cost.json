@@ -1,0 +1,110 @@
+[
+  {
+    "domain": "Memory",
+    "n_windows": 180,
+    "reps": {
+      "behavioral": {
+        "dim": 96,
+        "featurize_ms_total": 375.4,
+        "featurize_us_per_window": 2085.8,
+        "fit_s": 0.31
+      },
+      "set_pool": {
+        "dim": 30,
+        "featurize_ms_total": 21.0,
+        "featurize_us_per_window": 116.8,
+        "fit_s": 0.28
+      },
+      "sketch": {
+        "dim": 66,
+        "featurize_ms_total": 57.8,
+        "featurize_us_per_window": 321.1,
+        "fit_s": 0.31
+      },
+      "signature": {
+        "dim": 56,
+        "featurize_ms_total": 23.8,
+        "featurize_us_per_window": 132.3,
+        "fit_s": 0.31
+      },
+      "tsfresh": {
+        "dim": 4662,
+        "featurize_ms_total": 59548.3,
+        "featurize_us_per_window": 330823.6,
+        "fit_s": 0.52
+      }
+    }
+  },
+  {
+    "domain": "Dynamic graphs",
+    "n_windows": 135,
+    "reps": {
+      "behavioral": {
+        "dim": 96,
+        "featurize_ms_total": 275.4,
+        "featurize_us_per_window": 2039.9,
+        "fit_s": 0.27
+      },
+      "set_pool": {
+        "dim": 30,
+        "featurize_ms_total": 14.1,
+        "featurize_us_per_window": 104.4,
+        "fit_s": 0.26
+      },
+      "sketch": {
+        "dim": 66,
+        "featurize_ms_total": 39.0,
+        "featurize_us_per_window": 288.8,
+        "fit_s": 0.27
+      },
+      "signature": {
+        "dim": 56,
+        "featurize_ms_total": 16.3,
+        "featurize_us_per_window": 120.9,
+        "fit_s": 0.29
+      },
+      "tsfresh": {
+        "dim": 4662,
+        "featurize_ms_total": 41344.3,
+        "featurize_us_per_window": 306254.0,
+        "fit_s": 0.34
+      }
+    }
+  },
+  {
+    "domain": "Ecology",
+    "n_windows": 1496,
+    "reps": {
+      "behavioral": {
+        "dim": 80,
+        "featurize_ms_total": 2493.9,
+        "featurize_us_per_window": 1667.0,
+        "fit_s": 1.44
+      },
+      "set_pool": {
+        "dim": 25,
+        "featurize_ms_total": 132.8,
+        "featurize_us_per_window": 88.7,
+        "fit_s": 0.94
+      },
+      "sketch": {
+        "dim": 55,
+        "featurize_ms_total": 364.7,
+        "featurize_us_per_window": 243.8,
+        "fit_s": 1.12
+      },
+      "signature": {
+        "dim": 42,
+        "featurize_ms_total": 158.1,
+        "featurize_us_per_window": 105.7,
+        "fit_s": 1.41
+      },
+      "tsfresh": {
+        "dim": 3885,
+        "featurize_ms_total": 369682.3,
+        "featurize_us_per_window": 247113.8,
+        "fit_s": 4.98
+      }
+    }
+  }
+]
