@@ -16,7 +16,11 @@ repository-code: "https://github.com/FALLCWB/behavioral-featurization-OA"
 license: MIT
 version: "v1.0.0"
 date-released: "2026-06-26"
+doi: "10.5281/zenodo.20931276"
 identifiers:
   - type: doi
+    value: "10.5281/zenodo.20931276"
+    description: "Concept DOI (all versions, resolves to latest)"
+  - type: doi
     value: "10.5281/zenodo.20931277"
-    description: "Archived release v1.0.0 on Zenodo"
+    description: "Version DOI (archived release v1.0.0)"

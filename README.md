@@ -1,6 +1,6 @@
 # Behavioral Featurization
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20931277.svg)](https://doi.org/10.5281/zenodo.20931277)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20931276.svg)](https://doi.org/10.5281/zenodo.20931276)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 Companion code for the paper *Behavioral Featurization: Operationalizing Data of
@@ -72,7 +72,11 @@ single-threaded timing) and the same leakage-controlled cross-validation
 If you use this code, please cite the archived release:
 
 > F. A. L. Lemos, D. do Amaral, F. M. Priotto, and A. E. Lazzaretti,
-> *Behavioral Featurization* (v1.0.0). Zenodo, 2026. doi:10.5281/zenodo.20931277.
+> *Behavioral Featurization*. Zenodo, 2026. doi:10.5281/zenodo.20931276.
+
+The DOI above is the concept DOI and always resolves to the latest version. To
+cite the exact snapshot used here, use the v1.0.0 version DOI
+10.5281/zenodo.20931277.
 
 The accompanying paper, *Behavioral Featurization: Operationalizing Data of
 Unknown or Volatile Dimensionality for Machine Learning*, is to appear in IEEE
