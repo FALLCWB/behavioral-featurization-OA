@@ -1,0 +1,92 @@
+[
+  {
+    "domain": "Dynamic graphs",
+    "signal": "nodes",
+    "n": 132,
+    "majority_baseline": 0.5758,
+    "lag1_reversion": -0.4524,
+    "lag1_reversion_ci": [
+      -0.6261,
+      -0.3455
+    ],
+    "level_rule": 0.7424,
+    "level_rule_ci": [
+      0.6977,
+      0.7852
+    ],
+    "trend_rule": 0.4318,
+    "trend_rule_ci": [
+      0.381,
+      0.4963
+    ],
+    "per_source_lag1": {
+      "college": -0.3429,
+      "email": -0.6813,
+      "mathoverflow": -0.6747
+    },
+    "blocked": {
+      "level": [
+        0.7407,
+        0.1079
+      ],
+      "trend": [
+        0.4306,
+        0.0943
+      ],
+      "majority": [
+        0.5741,
+        0.0763
+      ]
+    },
+    "bootstrap": {
+      "resamples": 2000,
+      "unit": "time block",
+      "blocks": 5
+    }
+  },
+  {
+    "domain": "Ecology (EcoMon)",
+    "signal": "richness",
+    "n": 1493,
+    "majority_baseline": 0.5117,
+    "lag1_reversion": -0.3837,
+    "lag1_reversion_ci": [
+      -0.4442,
+      -0.3324
+    ],
+    "level_rule": 0.6269,
+    "level_rule_ci": [
+      0.6129,
+      0.6406
+    ],
+    "trend_rule": 0.4186,
+    "trend_rule_ci": [
+      0.3958,
+      0.4423
+    ],
+    "per_source_lag1": {
+      "south": -0.3976,
+      "mid": -0.367,
+      "north": -0.444
+    },
+    "blocked": {
+      "level": [
+        0.6235,
+        0.0392
+      ],
+      "trend": [
+        0.4186,
+        0.0372
+      ],
+      "majority": [
+        0.5117,
+        0.0113
+      ]
+    },
+    "bootstrap": {
+      "resamples": 2000,
+      "unit": "time block",
+      "blocks": 5
+    }
+  }
+]
