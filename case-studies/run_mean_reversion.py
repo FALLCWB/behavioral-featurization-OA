@@ -15,17 +15,20 @@ What is computed:
                     blocks the leakage-controlled folds use, which is the
                     conservative unit on a blocked domain. Negative is mean
                     reversion: above average now, down next.
-  level rule        accuracy of the zero-parameter rule "above the source mean,
-                    predict down; below, predict up".
+  level rule        accuracy of the rule "above the source mean, predict down;
+                    below, predict up", whose only estimated quantity is that
+                    mean.
   trend rule        accuracy of the momentum rule "it went up last step, predict
                     up", the order-dependent alternative.
 
-Both rules are reported twice. The descriptive figures use every window and a
-threshold read from the whole series. The figures the paper quotes are evaluated
-under the same StratifiedGroupKFold over the five time blocks that the forecasting
-experiment uses, with each source's threshold estimated on the training blocks
-alone, so that no held-out block informs the threshold and the accuracies can be
-set beside the leakage-controlled accuracy of the learned pool.
+Both rules are reported three times. The descriptive figures use every window and
+a threshold read from the whole series. The blocked figures use the same
+StratifiedGroupKFold over the five time blocks that the forecasting experiment
+uses, with each source's threshold estimated on the training blocks alone. The
+boundary-clean figures, which are the ones the paper quotes, additionally keep a
+transition only when the previous window, the current one and the one whose mean
+defines the label all carry the same block label, so that no retained transition
+spans a block boundary.
 
 Usage: python3 run_mean_reversion.py
 """
@@ -58,20 +61,29 @@ def series(sources, signal_key):
 
 def points(sources, signal_key):
     """(deviation, next change, previous change, label, block, level, source) per point."""
-    dev, nxt, prev, lab, blk, lvl, who = [], [], [], [], [], [], []
+    dev, nxt, prev, lab, blk, lvl, who, clean = [], [], [], [], [], [], [], []
     for si, (src, x) in enumerate(series(sources, signal_key).items()):
         m = len(x) - 1
         mu = float(x.mean())
+        def block_of(j):
+            return min(N_BLOCKS - 1, j * N_BLOCKS // max(m, 1))
         for i in range(m):
             dev.append(x[i] - mu)
             nxt.append(x[i + 1] - x[i])
             prev.append(x[i] - x[i - 1] if i > 0 else 0.0)
             lab.append(1 if x[i + 1] > x[i] else 0)
-            blk.append(min(N_BLOCKS - 1, i * N_BLOCKS // max(m, 1)))
+            blk.append(block_of(i))
             lvl.append(x[i])
             who.append(si)
+            # A transition is boundary-clean when every window it reads, the
+            # current one, the one whose mean defines the label, and for the
+            # momentum rule the previous one, falls inside the same time block.
+            ok = (block_of(i) == block_of(min(i + 1, m - 1))) and i > 0 \
+                 and block_of(i - 1) == block_of(i)
+            clean.append(bool(ok))
     return (np.array(dev), np.array(nxt), np.array(prev),
-            np.array(lab), np.array(blk), np.array(lvl), np.array(who))
+            np.array(lab), np.array(blk), np.array(lvl), np.array(who),
+            np.array(clean))
 
 
 def stats(dev, nxt, prev, lab):
@@ -97,7 +109,7 @@ def boot_ci(dev, nxt, prev, lab, blk):
             for k, v in keep.items()}
 
 
-def blocked_rules(lvl, prev, lab, blk, who):
+def blocked_rules(lvl, prev, lab, blk, who, keep=None):
     """The two rules and the majority baseline under the leakage-controlled folds.
 
     The level rule needs a threshold, and a threshold read from the whole series
@@ -108,6 +120,8 @@ def blocked_rules(lvl, prev, lab, blk, who):
     cv = StratifiedGroupKFold(5)
     acc = {"level": [], "trend": [], "majority": []}
     for tr, te in cv.split(lvl.reshape(-1, 1), lab, groups=blk):
+        if keep is not None:
+            tr, te = tr[keep[tr]], te[keep[te]]
         mu = {s: lvl[tr][who[tr] == s].mean() for s in np.unique(who[tr])}
         thr = np.array([mu.get(s, lvl[tr].mean()) for s in who[te]])
         acc["level"].append(float(np.mean((lvl[te] < thr).astype(int) == lab[te])))
@@ -123,7 +137,7 @@ def blocked_rules(lvl, prev, lab, blk, who):
 
 
 def run(name, sources, signal_key):
-    dev, nxt, prev, lab, blk, lvl, who = points(sources, signal_key)
+    dev, nxt, prev, lab, blk, lvl, who, clean = points(sources, signal_key)
     r, level, trend = stats(dev, nxt, prev, lab)
     ci = boot_ci(dev, nxt, prev, lab, blk)
     majority = float(max(np.mean(lab == 0), np.mean(lab == 1)))
@@ -132,10 +146,13 @@ def run(name, sources, signal_key):
     print(f"  level rule accuracy                 : {level:.3f}  95% CI [{ci['level'][0]:.3f}, {ci['level'][1]:.3f}]")
     print(f"  trend rule accuracy                 : {trend:.3f}  95% CI [{ci['trend'][0]:.3f}, {ci['trend'][1]:.3f}]")
     bl = blocked_rules(lvl, prev, lab, blk, who)
+    bc = blocked_rules(lvl, prev, lab, blk, who, keep=clean)
     print(f"  under the leakage-controlled folds, threshold from training blocks only:")
     for k in ("level", "trend", "majority"):
         m, h = bl[k]
-        print(f"    {k:8s} {m:.3f} +/- {h:.3f}")
+        c, ch = bc[k]
+        print(f"    {k:8s} {m:.3f} +/- {h:.3f}    boundary-clean {c:.3f} +/- {ch:.3f}")
+    print(f"    boundary-clean transitions: {int(clean.sum())} of {len(clean)}")
     per_source = {s: float(np.corrcoef(x[:-1] - x.mean(), np.diff(x))[0, 1])
                   for s, x in series(sources, signal_key).items() if len(x) > 3}
     print(f"  per source                          : "
@@ -147,6 +164,8 @@ def run(name, sources, signal_key):
             "trend_rule": round(trend, 4), "trend_rule_ci": [round(c, 4) for c in ci["trend"]],
             "per_source_lag1": {s: round(v, 4) for s, v in per_source.items()},
             "blocked": {k: [round(v[0], 4), round(v[1], 4)] for k, v in bl.items()},
+            "blocked_boundary_clean": {k: [round(v[0], 4), round(v[1], 4)] for k, v in bc.items()},
+            "boundary_clean_n": [int(clean.sum()), int(len(clean))],
             "bootstrap": {"resamples": BOOT, "unit": "time block", "blocks": int(N_BLOCKS)}}
 
 
